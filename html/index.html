@@ -3,16 +3,69 @@
 <head>
   <title>E-order seller System</title>
   <script src="https://unpkg.com/vue"></script>
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <link rel="stylesheet" type="text/css" href="buttons.css">
+  <link rel="stylesheet" type="text/css" href="../style/index.css">
+  <link rel="stylesheet" type="text/css" href="../style/buttons.css">
+  <link rel="stylesheet" href="https://unpkg.com/element-ui@2.3.9/lib/theme-chalk/index.css">
+  <script src="https://unpkg.com/element-ui@2.3.9/lib/index.js"></script>
+  
 
 </head>
 <body>
-  <div id="app">
-    {{ message }}
-  </div>
-  <div class="button button-royal button-pill button-giant">Submit</div>
+	<div id="app">
+		<el-container>
+			<el-aside>
+				<el-row class="tac">
+					<el-col>
+				    <el-menu
+				      default-active="2"
+				      class="el-menus"
+				      background-color="#545c64"
+				      text-color="#fff"
+				      active-text-color="#ffd04b">
+				      <el-menu-item index="1">
+				        <i class="el-icon-menu"></i>
+				        <span slot="title" class="showNav">导航</span>
+				      </el-menu-item>
+				      <el-menu-item index="2">
+				        <i class="el-icon-edit"></i>
+				        <span slot="title" class="showNav">登陆</span>
+				      </el-menu-item>
+				      <el-menu-item index="3">
+				        <i class="el-icon-edit-outline"></i>
+				        <span slot="title" class="showNav">注册</span>
+				      </el-menu-item>
+				      <el-menu-item index="4">
+				        <i class="el-icon-message"></i>
+				        <span slot="title" class="showNav">联系我们</span>
+				      </el-menu-item>
+				    </el-menu>
+				  </el-col>
+				</el-row>
+			</el-aside>
+			<el-main>
+				<div id="SignInTable">
+					<img id="peo" src="../assets/people.png">
+					<el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
+					  <el-form-item label="密码" prop="pass">
+					    <el-input type="password" v-model="ruleForm2.pass" auto-complete="off"></el-input>
+					  </el-form-item>
+					  <el-form-item label="确认密码" prop="checkPass">
+					    <el-input type="password" v-model="ruleForm2.checkPass" auto-complete="off"></el-input>
+					  </el-form-item>
+					  <el-form-item label="年龄" prop="age">
+					    <el-input v-model.number="ruleForm2.age"></el-input>
+					  </el-form-item>
+					  <el-form-item>
+					    <el-button type="primary" @click="submitForm('ruleForm2')">提交</el-button>
+					    <el-button @click="resetForm('ruleForm2')">重置</el-button>
+					  </el-form-item>
+					</el-form>
+				</div>
 
-  <script src="./index.js"></script>
+			</el-main>
+		</el-container>
+  </div>
+  
+  <script src="../javascript/index.js"></script>
 </body>
 </html>
