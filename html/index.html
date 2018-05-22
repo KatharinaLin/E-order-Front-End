@@ -13,13 +13,13 @@
 <body>
 	<div id="app">
 		<el-container>
-			<el-aside>
+			<el-aside width="100px">
 				<el-row class="tac">
 					<el-col>
 				    <el-menu
 				      default-active="2"
 				      class="el-menus"
-				      background-color="#545c64"
+				      background-color="#4F4F4F"
 				      text-color="#fff"
 				      active-text-color="#ffd04b">
 				      <el-menu-item index="1">
@@ -45,19 +45,23 @@
 			<el-main>
 				<div id="SignInTable">
 					<img id="peo" src="../assets/people.png">
-					<el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="100px" class="demo-ruleForm">
+					<div>
+						<p id="SignTitle">Sign In For E-Order</p>
+					</div>
+					<el-form :model="signInForm" status-icon :rules="signIn" ref="signInForm" label-width="100px">
+					  <el-form-item label="用户名" prop="username">
+					    <el-input v-model.number="signInForm.username" id="inputa"></el-input>
+					  </el-form-item>
 					  <el-form-item label="密码" prop="pass">
-					    <el-input type="password" v-model="ruleForm2.pass" auto-complete="off"></el-input>
+					    <el-input type="password" v-model="signInForm.pass" auto-complete="off" id="inputb"></el-input>
 					  </el-form-item>
-					  <el-form-item label="确认密码" prop="checkPass">
-					    <el-input type="password" v-model="ruleForm2.checkPass" auto-complete="off"></el-input>
-					  </el-form-item>
-					  <el-form-item label="年龄" prop="age">
-					    <el-input v-model.number="ruleForm2.age"></el-input>
-					  </el-form-item>
+					  <!-- <el-form-item label="确认密码" prop="checkPass">
+					    <el-input type="password" v-model="signInForm.checkPass" auto-complete="off"></el-input>
+					  </el-form-item> -->
+
 					  <el-form-item>
-					    <el-button type="primary" @click="submitForm('ruleForm2')">提交</el-button>
-					    <el-button @click="resetForm('ruleForm2')">重置</el-button>
+					    <el-button type="primary" @click="submitForm('signInForm')" id="signInButton">登陆</el-button>
+					    <!-- <el-button @click="resetForm('signInForm')">重置</el-button> -->
 					  </el-form-item>
 					</el-form>
 				</div>

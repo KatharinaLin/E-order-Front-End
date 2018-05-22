@@ -2,10 +2,11 @@ html,body {
    margin: 0;  
    padding: 0; 
    width: 100%;
-   height: 100%;  
+   height: 100%;
+   background-color: #FFE1FF;
 } 
 
-#app {
+#app,.el-container {
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -41,11 +42,17 @@ html,body {
 #SignInTable {
 	margin-right: auto;
 	margin-left:auto;
-	float: left;
-
-	border:5px solid red;
-	min-height:500px;
-	min-width:500px;
+	margin-top: 75px;
+	background-color: #EED2EE;
+	height:430px;
+	width:400px;
+	border:2px solid;
+	border-color: #CDB5CD;
+	border-radius:25px;
+	-moz-border-radius:25px; /* Old Firefox */
+}
+#inputa,#inputb {
+	width:200px;
 }
 
 .el-main {
@@ -59,4 +66,14 @@ html,body {
 	margin-left:auto;
 	margin-top: 20px;
 	margin-bottom: 30px;
+}
+
+#signInButton {
+	margin-left: 70px;
+}
+
+#SignTitle {
+	text-align: center;
+	font-family: Georgia, serif;
+	font-size: 25px;
 }
