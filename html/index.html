@@ -4,9 +4,9 @@
   <title>E-order seller System</title>
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" type="text/css" href="../style/index.css">
-  <link rel="stylesheet" type="text/css" href="../style/buttons.css">
   <link rel="stylesheet" href="https://unpkg.com/element-ui@2.3.9/lib/theme-chalk/index.css">
   <script src="https://unpkg.com/element-ui@2.3.9/lib/index.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
   
 
 </head>
@@ -21,20 +21,22 @@
 				      class="el-menus"
 				      background-color="#4F4F4F"
 				      text-color="#fff"
-				      active-text-color="#ffd04b">
+				      active-text-color="#ffd04b"
+				      router
+				      >
 				      <el-menu-item index="1">
 				        <i class="el-icon-menu"></i>
 				        <span slot="title" class="showNav">导航</span>
 				      </el-menu-item>
-				      <el-menu-item index="2">
+				      <el-menu-item  route="/signin" index="2">
 				        <i class="el-icon-edit"></i>
 				        <span slot="title" class="showNav">登陆</span>
 				      </el-menu-item>
-				      <el-menu-item index="3">
+				      <el-menu-item route="/signup" index="3">
 				        <i class="el-icon-edit-outline"></i>
 				        <span slot="title" class="showNav">注册</span>
 				      </el-menu-item>
-				      <el-menu-item index="4">
+				      <el-menu-item  route="/contact" index="4">
 				        <i class="el-icon-message"></i>
 				        <span slot="title" class="showNav">联系我们</span>
 				      </el-menu-item>
@@ -43,29 +45,7 @@
 				</el-row>
 			</el-aside>
 			<el-main>
-				<div id="SignInTable">
-					<img id="peo" src="../assets/people.png">
-					<div>
-						<p id="SignTitle">Sign In For E-Order</p>
-					</div>
-					<el-form :model="signInForm" status-icon :rules="signIn" ref="signInForm" label-width="100px">
-					  <el-form-item label="用户名" prop="username">
-					    <el-input v-model.number="signInForm.username" id="inputa"></el-input>
-					  </el-form-item>
-					  <el-form-item label="密码" prop="pass">
-					    <el-input type="password" v-model="signInForm.pass" auto-complete="off" id="inputb"></el-input>
-					  </el-form-item>
-					  <!-- <el-form-item label="确认密码" prop="checkPass">
-					    <el-input type="password" v-model="signInForm.checkPass" auto-complete="off"></el-input>
-					  </el-form-item> -->
-
-					  <el-form-item>
-					    <el-button type="primary" @click="submitForm('signInForm')" id="signInButton">登陆</el-button>
-					    <!-- <el-button @click="resetForm('signInForm')">重置</el-button> -->
-					  </el-form-item>
-					</el-form>
-				</div>
-
+				<router-view></router-view>
 			</el-main>
 		</el-container>
   </div>

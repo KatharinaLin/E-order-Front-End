@@ -51,7 +51,19 @@ html,body {
 	border-radius:25px;
 	-moz-border-radius:25px; /* Old Firefox */
 }
-#inputa,#inputb {
+#SignUpTable {
+	margin-right: auto;
+	margin-left:auto;
+	background-color: #EED2EE;
+	height:540px;
+	width:400px;
+	border:2px solid;
+	border-color: #CDB5CD;
+	border-radius:25px;
+	-moz-border-radius:25px; /* Old Firefox */
+}
+
+#inputa,#inputb, #confirm, #tel, #addr {
 	width:200px;
 }
 
@@ -64,8 +76,10 @@ html,body {
 	display:block;
 	margin-right: auto;
 	margin-left:auto;
-	margin-top: 20px;
-	margin-bottom: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 100px;
+	width: 100px;
 }
 
 #signInButton {
@@ -75,5 +89,6 @@ html,body {
 #SignTitle {
 	text-align: center;
 	font-family: Georgia, serif;
-	font-size: 25px;
+	font-size: 20px;
 }
+
