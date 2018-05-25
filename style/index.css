@@ -62,7 +62,18 @@ html,body {
 	border-radius:25px;
 	-moz-border-radius:25px; /* Old Firefox */
 }
-
+#contactView {
+	margin-right: auto;
+	margin-left:auto;
+	margin-top: 120px;
+	background-color: #EED2EE;
+	height:300px;
+	width:300px;
+	border:2px solid;
+	border-color: #CDB5CD;
+	border-radius:25px;
+	-moz-border-radius:25px; /* Old Firefox */
+}
 #inputa,#inputb, #confirm, #tel, #addr {
 	width:200px;
 }
@@ -86,9 +97,23 @@ html,body {
 	margin-left: 70px;
 }
 
-#SignTitle {
+#SignTitle, #ContactTitle {
 	text-align: center;
 	font-family: Georgia, serif;
 	font-size: 20px;
+}
+
+#contactDetail {
+	white-space: pre-wrap;
+	width: 80%;
+	margin-left: 10%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.el-icon-message {
+	margin-left: 10%;
 }
 
