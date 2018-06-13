@@ -105,7 +105,7 @@ Vue.component('signupshow', {
                 data: JSON.stringify(reqbody),
                 dataType : 'json', 
                 success: function(result) {
-                    console.log(result)
+                    router.push({ path: '/signin' })
                 },
                 error: function(message) {
                     console.log("error")

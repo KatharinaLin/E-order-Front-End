@@ -7,50 +7,25 @@
   <link rel="stylesheet" href="https://unpkg.com/element-ui@2.3.9/lib/theme-chalk/index.css">
   <script src="https://unpkg.com/element-ui@2.3.9/lib/index.js"></script>
   <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-  
+  <meta charset="UTF-8">
 
 </head>
 <body>
 	<div id="app">
+
 		<el-container>
 			<el-aside width="100px">
-				<el-row class="tac">
-					<el-col>
-				    <el-menu
-				      default-active="2"
-				      class="el-menus"
-				      background-color="#4F4F4F"
-				      text-color="#fff"
-				      active-text-color="#ffd04b"
-				      router
-				      >
-				      <el-menu-item index="1">
-				        <i class="el-icon-menu"></i>
-				        <span slot="title" class="showNav">导航</span>
-				      </el-menu-item>
-				      <el-menu-item  route="/signin" index="2">
-				        <i class="el-icon-edit"></i>
-				        <span slot="title" class="showNav">登陆</span>
-				      </el-menu-item>
-				      <el-menu-item route="/signup" index="3">
-				        <i class="el-icon-edit-outline"></i>
-				        <span slot="title" class="showNav">注册</span>
-				      </el-menu-item>
-				      <el-menu-item  route="/contact" index="4">
-				        <i class="el-icon-message"></i>
-				        <span slot="title" class="showNav">联系我们</span>
-				      </el-menu-item>
-				    </el-menu>
-				  </el-col>
-				</el-row>
+				<router-view name="naviBar"></router-view>
 			</el-aside>
 			<el-main>
-				<router-view></router-view>
+				<router-view name="mainContent"></router-view>
 			</el-main>
 		</el-container>
   </div>
   
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+  <script src="../javascript/beforeNavi.js"></script>
+  <script src="../javascript/afterNavi.js"></script>
   <script src="../javascript/contact.js"></script>
   <script src="../javascript/signUpShow.js"></script>
   <script src="../javascript/signInShow.js"></script>
