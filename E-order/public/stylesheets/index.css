@@ -74,6 +74,26 @@ html,body {
 	border-radius:25px;
 	-moz-border-radius:25px; /* Old Firefox */
 }
+#mealList .text_item{
+	height:100px;
+	width:300px;
+}
+#setting .item {
+	height: 50px;
+    margin-top: 20px;
+}
+#setting .input {
+	height:30px;
+	width:200px;
+}
+#crumbs {
+	height:50px;
+	width:300px;
+}
+#search-box .el-input {
+	height:50px;
+	width:100px;
+}
 #inputa,#inputb, #confirm, #tel, #addr {
 	width:200px;
 }
@@ -117,3 +137,16 @@ a {
 	margin-left: 10%;
 }
 
+#addCategories, #updateCategories {
+	width: 200px;
+	height: 30px;
+}
+
+
+.edit-input {
+	width: 120px;
+}
+
+#search-box .el-date-picker {
+	width: 140px;
+}
